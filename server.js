@@ -2,8 +2,8 @@
 // test with:
 //      curl -X POST --data-binary @server.js http://localhost:3000
 //      curl -X OPTIONS http://localhost:3000
-const http = require('http');
-var crypto = require('crypto');
+import http from 'http';
+import crypto from 'crypto';
 http
   .createServer((req, response) => {
     // OPTIONS for CORS
