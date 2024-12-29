@@ -18,7 +18,7 @@ export default function Home() {
     <div className='min-h-screen bg-background p-4 flex items-center justify-center'>
       <Card className='w-full max-w-md'>
         <CardHeader>
-          <CardTitle>Cleancard Cancer Diagnostic Test</CardTitle>
+          <CardTitle>Skin Video analysis tool</CardTitle>
           <CardDescription>
             Welcome to your diagnostic test process. This application will guide
             you through capturing images of your test device.

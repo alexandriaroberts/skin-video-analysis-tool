@@ -1,8 +1,8 @@
-# Cleancard Test Project
+# Skin Video analysis tool Project
 
 ## Project Overview
 
-This project is a web application designed to guide users through capturing five images of a cancer diagnostic device, sending them to a mock server, and displaying the results. It's built using React with Next.js and includes a Node.js mock server for handling image submissions.
+This project is a web application designed to guide users through capturing five images of skin diagnostic device, sending them to a mock server, and displaying the results. It's built using React with Next.js and includes a Node.js mock server for handling image submissions.
 
 ## Table of Contents
 
@@ -51,7 +51,7 @@ Key UX considerations:
 
    ```
    git clone [repository-url]
-   cd cleancard-test
+   cd Skin-Video-analysis-tool
    ```
 
 2. Install dependencies:
@@ -92,7 +92,7 @@ This project leveraged these tools to create a modern, efficient, and user-frien
 ## Project Structure
 
 ```
-cleancard-test/
+Skin Video analysis tool-test/
 ├── app/
 │   ├── capture/
 │   │   └── page.tsx

@@ -5,9 +5,9 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Cleancard Cancer Diagnostic Test',
+  title: 'Skin Video analysis Diagnostic Tool',
   description:
-    'A web application for capturing and analyzing Cleancard test results',
+    'A web application for capturing and analyzing Skin Video analysis tool test results',
 };
 
 export default function RootLayout({
