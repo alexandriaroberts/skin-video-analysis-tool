@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import {
@@ -113,7 +113,7 @@ export default function CapturePage() {
   };
 
   // Start camera when component mounts
-  useState(() => {
+  useEffect(() => {
     startCamera();
   }, []);
 
