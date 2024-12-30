@@ -112,7 +112,6 @@ export default function CapturePage() {
     setStep(step - 1);
   };
 
-  // Start camera when component mounts
   useEffect(() => {
     startCamera();
   }, []);
@@ -120,19 +119,21 @@ export default function CapturePage() {
   const CurrentIcon = steps[step]?.icon || Camera;
 
   return (
-    <div className='min-h-screen bg-background p-4 flex items-center justify-center'>
-      <Card className='w-full max-w-md'>
-        <CardHeader>
-          <CardTitle className='flex items-center gap-2'>
-            <CurrentIcon className='h-5 w-5' />
+    <div className='min-h-screen bg-gradient-to-br from-blue-100 to-indigo-200 p-4 flex items-center justify-center'>
+      <Card className='w-full max-w-md shadow-lg border-0'>
+        <CardHeader className='bg-white bg-opacity-70 backdrop-blur-sm rounded-t-lg'>
+          <CardTitle className='flex items-center gap-2 text-xl font-bold text-indigo-800'>
+            <CurrentIcon className='h-6 w-6 text-indigo-600' />
             {steps[step]?.title || 'Complete'}
           </CardTitle>
-          <CardDescription>{steps[step]?.description}</CardDescription>
+          <CardDescription className='text-indigo-600'>
+            {steps[step]?.description}
+          </CardDescription>
         </CardHeader>
-        <CardContent className='space-y-4'>
+        <CardContent className='space-y-4 bg-white bg-opacity-70 backdrop-blur-sm'>
           <Progress value={(step / 5) * 100} className='w-full' />
 
-          <div className='relative aspect-[4/3] overflow-hidden rounded-lg bg-muted'>
+          <div className='relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-100 shadow-inner'>
             <video
               ref={videoRef}
               autoPlay
@@ -142,15 +143,22 @@ export default function CapturePage() {
             <canvas ref={canvasRef} className='hidden' />
           </div>
         </CardContent>
-        <CardFooter className='flex gap-2'>
+        <CardFooter className='bg-white bg-opacity-70 backdrop-blur-sm rounded-b-lg flex gap-2'>
           {step > 0 && (
-            <Button variant='default' onClick={retakePhoto}>
+            <Button
+              variant='outline'
+              onClick={retakePhoto}
+              className='flex-1 border-indigo-300 text-indigo-700 hover:bg-indigo-100'
+            >
               <RefreshCcw className='mr-2 h-4 w-4' />
               Retake
             </Button>
           )}
           {step < 5 && (
-            <Button className='flex-1' onClick={captureImage}>
+            <Button
+              className='flex-1 bg-indigo-600 hover:bg-indigo-700 text-white'
+              onClick={captureImage}
+            >
               <Camera className='mr-2 h-4 w-4' />
               Capture Photo {step + 1}/5
             </Button>
